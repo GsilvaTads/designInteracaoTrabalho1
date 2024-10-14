@@ -69,4 +69,6 @@ document.getElementById('resetar').addEventListener('click', function() {
    leftPos = 50;  // Resetando posição horizontal
    grafico.style.top = topPos + '%';
    grafico.style.left = leftPos + '%';
+
+   alert('Suas alterações serão resetadas para os valores originais. Confirmar?');
 });
