@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Trabalho 1 Design</title>    
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <body>
-        <div class="container">
-            <div id="controles">
+    
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-                <div id="paleta" class="paleta">
-                    <label for="paleta">Paleta de Cores:</label>
-                    <input type="color" id="cor" value="#000000"> 
-                </div> 
 
-                    <button id="alterarTexto" class="controle">Cor do Texto</button>
-                    <button id="alterarCor" class="controle">Cor da Borda</button>
-                    <button id="alterarFundo" class="controle">Cor de Fundo</button>
-                    <button id="alterarTamanho" class="controle">Tamanho da Imagem</button>
-                    <button id="moverCima" class="controle">Mover Imagem para Cima</button>
-                    <button id="moverBaixo" class="controle">Mover Imagem para Baixo</button>
-                    <button id="moverEsquerda" class="controle">Mover Imagem para Esquerda</button>
-                    <button id="moverDireita" class="controle">Mover Imagem para Direita</button>
-                    <button id="resetar" class="controle">Resetar Painel</button>
-                        
-                <div id="painel">
-                    <p id="instrucao">Utilize os controle ao lado para alterações deste painel.</p>
-                    <img id="grafico" src="imagens/tads.jpg" alt="Tads logo">
+    <title>Trabalho 1 Design</title>
+    
+</head>
+<body>
+
+    <!-- Container que mantém os controles e o painel alinhados -->
+    <div class="container">
+        <!-- Controles à esquerda -->
+        <div id="controles">
+
+            <div id="paleta" class="paleta">
+                <!-- Seletor de cor para a borda -->
+                <label for="paleta">Paleta de Cores:</label>
+                <input type="color" id="cor" value="#000000"> <!-- Valor inicial preto -->
                 </div>
+    
+            <br>   
 
-            </div>
-
+            <button id="alterarTexto" class="controle">Cor do Texto</button>
+            <button id="alterarCor" class="controle">Cor da Borda</button>
+            <button id="alterarFundo" class="controle">Cor de Fundo</button>
+            <button id="alterarTamanho" class="controle">Tamanho da Imagem</button>
+            <button id="moverCima" class="controle">Mover Imagem para Cima</button>
+            <button id="moverBaixo" class="controle">Mover Imagem para Baixo</button>
+            <button id="moverEsquerda" class="controle">Mover Imagem para Esquerda</button>
+            <button id="moverDireita" class="controle">Mover Imagem para Direita</button>
+            <button id="resetar" class="controle">Resetar Painel</button>
         </div>
 
-        <script src="javaScript.js" defer></script>   
+        <!-- Painel com a imagem -->
+        <div id="painel">
+            <p id="instrucao">Utilize os controle ao lado para alterações deste painel.</p>
+            <img id="grafico" src="imagens/tads.jpg" alt="Tads logo">
+        </div>
+    </div>
 
-    </body>
+    <script src="javaScript.js" defer></script>   
+
+</body>
 </html>
