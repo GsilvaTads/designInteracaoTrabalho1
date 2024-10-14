@@ -1,12 +1,5 @@
 
-/* Container */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Painel */
+/* Estilo geral do painel */
 #painel {
     width: 500px;
     height: 500px;
@@ -16,14 +9,13 @@
     background-color: rgb(253, 253, 253);
 }
 
-/* Texto do painel */
 #instrucao {
     font-size: 20px;
     text-align: center;
     margin: 0;
 }
 
-/* Imagem */
+/* Estilo da imagem dentro do painel */
 #grafico {
     width: 100px;
     height: 100px;
@@ -33,7 +25,7 @@
     transform: translate(-50%, -50%);
 }
 
-/* Controles */
+/* Estilo dos controles */
 #controles {
     display: flex;
     flex-direction: column;
@@ -42,8 +34,22 @@
     margin-left: 20px;
 }
 
+#botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+    margin-left: 20px;
+}
 
-/* Botões do controle */
+/* Layout de container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botões de controle */
 .controle {
     margin-bottom: 10px;
     padding: 10px;
@@ -51,108 +57,122 @@
     width: 200px;
 }
 
-
-/* Texto paleta cores */
 #paleta {
     margin-bottom: 10px;
     padding: 10px;
     font-size: 18px;
 }
 
-/* Paleta de cores */
 #paleta input {
     margin-left: 20px;
 }
 
-/* Ajuste tela celular */
+
+
+
+/* Ajustes para telas pequenas (celular) */
 @media (max-width: 480px) {
     .container {
-        flex-direction: row; 
-        height: 100vh;
+        flex-direction: row; /* Alinha os controles à esquerda e o painel à direita */
+        height: 100vh; /* Garante que a altura do container ocupe 100% da tela */
     }
 
     #painel {
-        width: 70%; 
-        height: 90vh; 
-        border-left: 5px solid black;         
-    }
-    
-    .controle {
-        font-size: 0; 
-        width: 80px; 
-        height: 40px; 
-        padding: 5px; 
+        width: 70%; /* Painel ocupa mais espaço à direita */
+        height: 90vh; /* Painel ocupa a altura total da tela */
+        border-left: 5px solid black; /* Definir borda esquerda */
+        
     }
 
+        
+    .controle {
+        font-size: 0; /* Remove o texto visível dos botoes */
+        width: 80px; /* Ajusta o tamanho dos botões */
+        height: 40px; /* Diminui a altura dos botões */
+        padding: 5px; /* Ajusta o padding para reduzir a altura */
+    }
+
+
     #controles {
-        width: 30%; /
-        height: 95vh; /
+        width: 30%; /* Controles ocupam menos espaço à esquerda */
+        height: 95vh; /* Garante que os controles também ocupem 100% da altura */
         align-items: flex-start;
         justify-content: flex-start;        
     }
 
+
     #paleta {
-        display: flex; 
-        align-items: center; 
-        margin-bottom: 10px;
+        display: flex; /* Usar flexbox para alinhar o input com os botões */
+        align-items: center; /* Alinha verticalmente os itens */
+        margin-bottom: 10px; /* Espaço abaixo da paleta */
     }
+
     #paleta label {
-        display: none;         
+        display: none; /* Oculta o label em telas menores */
+        
     }
     
     #paleta input {
-        margin-left: 0; 
-        padding: 5px; 
-        width: 40px; 
-        height: 30px;         
+        margin-left: 0; /* Remove a margem esquerda */
+        padding: 5px; /* Ajusta o padding para uma aparência melhor */
+        width: 40px; /* Ajusta a largura do input */
+        height: 30px; /* Define uma altura compatível com os botões */
+          
+        
     }
 
     #instrucao {
-        font-size: 15px;        
+        font-size: 15px;
+        
     }
 
 
-    /* Ajuste conteudo dos botões */
-    #alterarTexto::after {
-        content: 'Cor Texto';
-    }
-    
-    #alterarCor::after {
-        content: 'Cor Borda'; 
-    }
-    
-    #alterarFundo::after {
-        content: 'Cor Fundo'; 
-    }
-    
-    #alterarTamanho::after {
-        content: 'Tamanho figura';
-    }
-    
-    #moverCima::after {
-        content: '↑'; 
-    }
-    
-    #moverBaixo::after {
-        content: '↓'; 
-    }
-    
-    #moverEsquerda::after {
-        content: '←';
-    }
-    
-    #moverDireita::after {
-        content: '→'; 
-    }
-    
-    #resetar::after {
-        content: 'Reset';
-    }
-    
-    /* Conteúdo dos botoes */
-    .controle::after {
-        font-size: 11px;     
-        display: block;
-        text-align: center;
-    }
+
+
+/* Oculta o texto dentro dos botões e usa conteúdo alternativo */
+#alterarTexto::after {
+    content: 'Cor Texto'; /* Abreviação ou ícone para 'Cor do Texto' */
 }
+
+#alterarCor::after {
+    content: 'Cor Borda'; /* Abreviação ou ícone para 'Cor da Borda' */
+}
+
+#alterarFundo::after {
+    content: 'Cor Fundo'; /* Abreviação ou ícone para 'Cor de Fundo' */
+}
+
+#alterarTamanho::after {
+    content: 'Tamanho figura'; /* Abreviação ou ícone para 'Tamanho da Imagem' */
+}
+
+#moverCima::after {
+    content: '↑'; /* Ícone de seta para 'Mover Imagem para Cima' */
+}
+
+#moverBaixo::after {
+    content: '↓'; /* Ícone de seta para 'Mover Imagem para Baixo' */
+}
+
+#moverEsquerda::after {
+    content: '←'; /* Ícone de seta para 'Mover Imagem para Esquerda' */
+}
+
+#moverDireita::after {
+    content: '→'; /* Ícone de seta para 'Mover Imagem para Direita' */
+}
+
+#resetar::after {
+    content: 'Reset'; /* Abreviação para 'Resetar Painel' */
+}
+
+/* Conteúdo dos botoes */
+.controle::after {
+    font-size: 11px;     
+    display: block;
+    text-align: center;
+}
+}
+
+
+
